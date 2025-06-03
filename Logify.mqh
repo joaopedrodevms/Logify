@@ -11,6 +11,7 @@
 //+------------------------------------------------------------------+
 #include "LogifyModel.mqh"
 #include "Handlers/LogifyHandler.mqh"
+#include "Handlers/LogifyHandlerComment.mqh"
 #include "Handlers/LogifyHandlerConsole.mqh"
 #include "Handlers/LogifyHandlerDatabase.mqh"
 #include "Handlers/LogifyHandlerFile.mqh"
@@ -65,6 +66,7 @@ CLogify::~CLogify()
    int size_handlers = ArraySize(m_handlers);
    for(int i=0;i<size_handlers;i++)
      {
+      m_handlers[i].Close();
       delete m_handlers[i];
      }
   }
