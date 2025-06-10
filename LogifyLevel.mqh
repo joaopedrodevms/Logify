@@ -11,7 +11,7 @@
 enum ENUM_LOG_LEVEL
   {
    LOG_LEVEL_DEBUG = 0,    // Debug
-   LOG_LEVEL_INFO,        // Infor
+   LOG_LEVEL_INFO,         // Info
    LOG_LEVEL_ALERT,        // Alert
    LOG_LEVEL_ERROR,        // Error
    LOG_LEVEL_FATAL,        // Fatal

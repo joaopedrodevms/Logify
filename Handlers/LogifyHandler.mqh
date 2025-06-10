@@ -48,6 +48,7 @@ public:
 //+------------------------------------------------------------------+
 CLogifyHandler::CLogifyHandler(void)
   {
+   m_formatter = new CLogifyFormatter();
   }
 //+------------------------------------------------------------------+
 //| Destructor                                                       |
@@ -57,7 +58,7 @@ CLogifyHandler::~CLogifyHandler(void)
    //--- Delete formatter
    if(m_formatter != NULL)
      {
-      delete m_formatter ;
+      delete m_formatter;
      }
   }
 //+------------------------------------------------------------------+
@@ -90,6 +91,7 @@ void CLogifyHandler::SetLevel(ENUM_LOG_LEVEL level)
 //+------------------------------------------------------------------+
 void CLogifyHandler::SetFormatter(CLogifyFormatter *format)
   {
+   delete m_formatter;
    m_formatter = GetPointer(format);
   }
 //+------------------------------------------------------------------+
