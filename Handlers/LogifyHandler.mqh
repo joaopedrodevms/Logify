@@ -48,6 +48,7 @@ public:
 //+------------------------------------------------------------------+
 CLogifyHandler::CLogifyHandler(void)
   {
+   m_level = LOG_LEVEL_INFO;
    m_formatter = new CLogifyFormatter();
   }
 //+------------------------------------------------------------------+
