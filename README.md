@@ -83,15 +83,16 @@ Cada handler pode ter seu próprio nível de log configurado de forma independen
 │
 ├── 📂 Handlers/
 │ ├── LogifyHandler.mqh         # Interface base para manipuladores de log
+│ ├── LogifyHandlerComment.mqh  # Saída para o log no comentario do grafico
 │ ├── LogifyHandlerConsole.mqh  # Saída para o log do terminal MetaTrader
 │ ├── LogifyHandlerDatabase.mqh # Suporte para persistência em banco de dados
 │ ├── LogifyHandlerFile.mqh     # Escrita de logs em arquivos locais
 │
 ├── 📂 Utils/
-│ ├── IntervalWatcher.mqh       # Utilitário para medir tempo entre eventos
-│ └── Update.mqh                # Utilitário para atualização de estados/logs
+│ └── IntervalWatcher.mqh       # Utilitário para medir tempo entre eventos
 │
 ├── Logify.mqh                  # Classe principal que orquestra os logs
+├── LogifyBuilder.mqh           # Classe responsavel por criar um objeto CLogify, simplificando a configuração
 ├── LogifyLevel.mqh             # Enumeração e definição de níveis de log
 └── LogifyModel.mqh             # Estrutura de dados para representar uma entrada de log
 ```
