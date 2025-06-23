@@ -92,7 +92,10 @@ void CLogifyHandler::SetLevel(ENUM_LOG_LEVEL level)
 //+------------------------------------------------------------------+
 void CLogifyHandler::SetFormatter(CLogifyFormatter *format)
   {
-   delete m_formatter;
+   if(format != m_formatter)
+     {
+      delete m_formatter;
+     }
    m_formatter = GetPointer(format);
   }
 //+------------------------------------------------------------------+
